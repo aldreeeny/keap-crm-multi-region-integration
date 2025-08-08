@@ -61,7 +61,6 @@ This Google Apps Script project provides comprehensive data integration with Kea
 3. **Google Sheets Setup**:
    Create sheets with the following names:
    - "Contacts" (filtered contacts)
-   - "Current Bx Global Member" (tagged contacts)
    - "contactsDump" (all contacts)
    - "companies"
    - "users"
