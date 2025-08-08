@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculations</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+      
+      h1 {
+        text-align: center;
+        margin-top: 10px;
+      }
+      h3 {
+        text-align: center;
+        margin-top: 10px;
+      }
+      
+      form {
+        width: 250px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+      }
+      
+      label {
+        display: inline-block;
+        width: 45%;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      input[type="date"] {
+        display: inline-block;
+        width: 45%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+      }
+      
+      input[type="submit"] {
+        display: block;
+        margin: 20px auto 0;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculations</h1>
+    <h3>Directions select a start and end date to automatically get the calculations for every locations this would you could see the result on the Calculations Sheet</h3>
+    <form>
+      <label for="start-date">Select Month</label>
+      <input type="month" id="start-date" name="start-date">
+      <input type="submit" id="submit-button" value="Submit">
+    </form>
+
+    <script>
+      const submitButton = document.getElementById("submit-button");
+      submitButton.addEventListener("click", function(event) {
+        const startDate = document.getElementById("start-date").value;
+        google.script.run.buttonCalc(startDate);
+      });
+    </script>
+  </body>
+</html>
